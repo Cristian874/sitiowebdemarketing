@@ -1,0 +1,145 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.final{
+
+background-color: v.$colorPrimario;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 60rem;
+border-radius: 1rem;
+
+
+&__heading{
+   color: v.$colorBlanco;
+    font-size: 3rem;
+    @include m.tablet {
+        font-size: 5rem; 
+        
+     }
+}
+
+&__txt{
+    text-align: center;
+    font-size: 1.7rem;
+    color: v.$colorBlanco;
+    width: 90%;
+    @include m.tablet {
+        width: 60%;
+        margin: 0 auto; 
+        
+     }
+}
+
+&__formulario{
+    margin-top: 3rem;
+    display: flex;
+    position: relative;
+}
+&__input{
+
+    padding: 2rem 1rem;
+    outline: none;
+
+    border-radius: .5rem;
+    width: 30rem;
+
+    @include m.tablet { 
+            width: 42rem;
+        
+     }
+}
+
+&__boton{
+        padding: 1.5rem 1rem;
+    position: absolute;
+    width: auto;
+   
+    left: 20rem;
+     top: .5rem;
+     @include m.tablet { 
+        left:32rem;
+        
+      }
+}
+
+&__animacion{
+    display: flex;
+}
+
+&__azul{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    background-color: v.$colorBlanco;
+
+
+    animation: pelotas .8s linear infinite;
+
+    @include m.tablet {
+        margin-left: 10rem; 
+        
+     }
+
+     @include m.desktop { 
+        margin-left: 15rem;
+        
+      }
+}
+
+
+&__rosa{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    background-color: v.$degradado;
+    animation: pelotas .8s linear infinite;
+    margin-left: 10rem;
+
+    @include m.tablet { 
+        
+    margin-left: 30rem;
+        
+     }
+     @include m.desktop { 
+        margin-left: 70rem;
+        
+      }
+}
+
+}
+
+
+
+@keyframes pelotas {
+    0%{
+
+        transform: scale(1);
+
+
+    }
+    
+    25%{
+
+        transform: scale(1.1);
+
+    }
+    50%{
+        transform: scale(1.2);
+
+    }
+    75%{
+
+        transform: scale(1.1);
+
+    }
+    
+    100%{
+        transform: scale(1);
+
+
+    }
+
+}

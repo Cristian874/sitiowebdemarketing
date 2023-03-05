@@ -1,0 +1,106 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.principal{
+
+    &__grid{
+        margin-top: 5rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            gap: 3rem; 
+            
+         }
+    }
+
+    &__imagen{
+        background-color: v.$degradado;
+        border-radius: 100%;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        @include m.tablet {
+            margin-bottom: 0; 
+            
+         }
+    }
+
+    &__img{
+       
+        width: 70%;
+        margin: 0 auto;
+        animation: imagen 2s ease-in-out infinite;
+    }
+   &__img--uno{
+    position: relative;
+   }
+    &__img--dos{
+        width: 100%;
+        margin-top: -10rem;
+        @include m.desktop {
+            margin-top: -20rem; 
+            
+         }
+    }
+
+    &__informacion{
+        margin-bottom: 5rem;
+        @include m.tablet {
+            margin-bottom: 0; 
+            
+         }
+    }
+    &__heading{
+        font-size: 3rem;
+        color: v.$colorPrimario;
+ 
+      text-align: center;
+      margin-bottom: 2rem;
+      @include m.tablet {
+        text-align: left; 
+        font-size: 5rem;
+        
+       }
+    }
+
+    &__footer{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__numero{
+        color: v.$colorBoton;
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+    }
+    &__descripcion{
+        margin: 0;
+        padding: 0;
+        width: 70%;
+        line-height: 1.4;
+        color: v.$colorPrimario;
+        
+    }
+    &__span{
+        color: v.$colorParrafo;
+    }
+}
+
+
+
+@keyframes  imagen {
+
+    0% {
+        top: -1%;
+      }
+      50% {
+        top: 1%;
+      }
+      100% {
+        top: -1%;
+      }
+    
+}

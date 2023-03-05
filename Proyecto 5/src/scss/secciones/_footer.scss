@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+    background-color: v.$colorFooter;
+    padding: 10rem 0;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+        @include m.tablet {
+            grid-template-columns: repeat(4,1fr);
+            
+            
+         }
+    }
+
+    &__heading{
+        font-size: 3rem;
+        margin: 1rem 0;
+    }
+
+    &__link{
+        list-style: none;
+        margin-bottom: 2rem ;
+        font-size: 1.8rem;
+        color: v.$colorParrafo;
+        cursor: pointer;
+    }
+    &__iconos{
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__icono{
+        background-color: v.$colorBlanco;
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+        border-radius: 50%;
+    }
+}

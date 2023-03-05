@@ -1,0 +1,49 @@
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.slider{
+
+    &__heading{
+        text-align: center;
+        font-size: 3rem;
+        color: v.$colorPrimario;
+        @include m.tablet {
+            font-size: 5rem; 
+            width: 60%;
+            margin: 0 auto;
+            
+         }
+    }
+
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: left;
+        background-color: v.$colorBlanco;
+        box-shadow: 50px 50px 60px 50px rgb( 0 0 0/.1);
+        padding: 4rem 2rem;
+    }
+
+
+    &__cliente{
+        width: 10rem ;
+        height: 10rem;
+        margin: 2rem 0;
+    }
+
+    &__txt{
+        width: 80%;
+        margin: 2rem 0;
+        text-align: center;
+        
+    }
+
+    &__autor{
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,54 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.separacion{
+    margin-top: 10rem;
+}
+.center{
+    text-align: center;
+    font-size: 3rem;
+    color: v.$colorPrimario;
+
+    
+    @include m.tablet {
+        width: 70%;
+        margin: 0 auto; 
+        
+     }
+}
+
+.boton{
+
+    display: block;
+    width: 100%;
+    background-color: v.$colorBoton;
+    color: v.$colorBlanco;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    transition-property: background-color, color;
+    transition-duration: .7s;
+    border: none;
+    &:hover{
+        background-color: v.$colorBlanco;
+        color: v.$colorNegro;
+        cursor: pointer;
+    }
+
+    @include m.tablet { 
+     display: inline;
+    
+    }
+}
+.abajo{
+    background-color: v.$colorPrimario;
+    position: fixed;
+    width: 100%;
+    top: 0;
+     padding: 2rem 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    box-shadow: 10px 10px 10px 10px rgb(0 0 0 /.2);
+}
